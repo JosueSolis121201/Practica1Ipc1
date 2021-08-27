@@ -9,7 +9,7 @@ public class Practica_1 {
         Calculadora nuevaCalcu =new Calculadora();
              
         
-         nuevaCalcu.sumaYRestaDeMatricesOpcion1();
+         nuevaCalcu.divisionDeMatricesOpcion3();
        
         
          //DecimalFormat df= new DecimalFormat ("#.00");
