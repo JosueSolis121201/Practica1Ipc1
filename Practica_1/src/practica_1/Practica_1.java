@@ -6,10 +6,12 @@ public class Practica_1 {
 
 
     public static void main(String[] args) {
-        Calculadora nuevaCalcu =new Calculadora();
-             
-        
-         nuevaCalcu.divisionDeMatricesOpcion3();
+    //    Calculadora nuevaCalcu =new Calculadora();
+       //  nuevaCalcu.divisionDeMatricesOpcion3();
+       
+       
+       Tablero nuevotablero =new Tablero();
+       nuevotablero.dibujadoTablero();
        
         
          //DecimalFormat df= new DecimalFormat ("#.00");
