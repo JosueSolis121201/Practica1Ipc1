@@ -30,9 +30,10 @@ public class Menu {
 
              juego.juego();
             }
-
             else if(valor.equals("3")){
                 juego.generarReporte2();
+                juego.generarReporte1();
+
 
             }
 

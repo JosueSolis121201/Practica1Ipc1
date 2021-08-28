@@ -96,25 +96,106 @@ public class Calculadora {
         double ladoB = 9.01;
         double respuestaBeta = (double) 0.0;
         double respuestaGamma = (double) 0.0;
+        this.reporte1 = this.reporte1+" -------------Ley de cosenos opcion 1------------------" +"\n";
+
+        
+       
         System.out.println("Esta es la respuesta de la opcion 1");
 //                 Operaciones para lado B
         double radian = Math.toRadians(angulo);
         System.out.println("Esta es lado B");
+                this.reporte1 = this.reporte1+"Operaciones para encontrar lado B" +"\n";
+
+                this.reporte1 = this.reporte1+"Este es el lado A"+"\n";
+                this.reporte1 = this.reporte1+ladoA+"\n";
+                
+
+                this.reporte1 = this.reporte1+"Este es el lado C"+"\n";
+                this.reporte1 = this.reporte1+ladoC+"\n";
+                
+                this.reporte1 = this.reporte1+"Este es el angulo"+"\n";
+                this.reporte1 = this.reporte1+angulo+"\n";
+               
+            
+        this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+        this.reporte1 = this.reporte1+"Lado B = Math.sqrt(ladoA * ladoA + ladoC * ladoC - 2 * ladoC * ladoA * Math.cos(radian))"+"\n";
+        this.reporte1 = this.reporte1+"Este es el resultado"+"\n";
+           
+                this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+                
+
         DecimalFormat df= new DecimalFormat ("#.000");
         respuestaLadoB = Math.sqrt(ladoA * ladoA + ladoC * ladoC - 2 * ladoC * ladoA * Math.cos(radian));
-        
-       
          System.out.println(df.format(respuestaLadoB));
-        
+                this.reporte1 = this.reporte1+respuestaLadoB+"\n";  
+                
+
         System.out.println("Esta es angulo Beta");
 //                 Operaciones para Beta
+                this.reporte1 = this.reporte1+"Operaciones para encontrar angulo Beta" +"\n";
+
+        this.reporte1 = this.reporte1+"Este es el lado A"+"\n";
+        this.reporte1 = this.reporte1+ladoA+"\n";
+        
+        this.reporte1 = this.reporte1+"Este es el lado B"+"\n";
+        this.reporte1 = this.reporte1+ladoB+"\n";
+        
+        
+        this.reporte1 = this.reporte1+"Este es el lado C"+"\n";
+        this.reporte1 = this.reporte1+ladoC+"\n";
+        
+        
+        this.reporte1 = this.reporte1+"Este es el angulo"+"\n";
+        this.reporte1 = this.reporte1+angulo+"\n";
+        
+        this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+        
+        this.reporte1 = this.reporte1+"Math.toDegrees(Math.acos((ladoA * ladoA - ladoC * ladoC - ladoB * ladoB) / (-2 * (ladoC) * (ladoB))))"+"\n";
+           
+
+        
+
         respuestaBeta = Math.toDegrees(Math.acos((ladoA * ladoA - ladoC * ladoC - ladoB * ladoB) / (-2 * (ladoC) * (ladoB))));
         System.out.println(df.format(respuestaBeta));
+        
+        this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+        this.reporte1 = this.reporte1+" Este es el angulo Beta" +"\n";
 
+        
+        this.reporte1 = this.reporte1+respuestaBeta+"\n"; 
+        
+        
+        
         System.out.println("Esta es angulo Gamma");
 //                 Operaciones para Gamma
+                this.reporte1 = this.reporte1+"Operaciones para encontrar angulo Gamma" +"\n";
+
+        this.reporte1 = this.reporte1+"Este es el lado A"+"\n"; 
+        this.reporte1 = this.reporte1+ladoA+"\n";
+        
+        this.reporte1 = this.reporte1+"Este es el lado B"+"\n"; 
+        this.reporte1 = this.reporte1+ladoB+"\n";
+        
+        this.reporte1 = this.reporte1+"Este es el lado C"+"\n"; 
+        this.reporte1 = this.reporte1+ladoC+"\n";
+        
+        this.reporte1 = this.reporte1+"Este es angulo"+"\n"; 
+        this.reporte1 = this.reporte1+angulo+"\n";
+        
+        this.reporte1 = this.reporte1+"----------------Ecuacion-----------------------"+"\n";
+        this.reporte1 = this.reporte1+"Math.toDegrees(Math.acos((-ladoA * ladoA + ladoC * ladoC - ladoB * ladoB) / (-2 * (ladoA) * (ladoB))))"+"\n";
+
+
+
+
         respuestaGamma = Math.toDegrees(Math.acos((-ladoA * ladoA + ladoC * ladoC - ladoB * ladoB) / (-2 * (ladoA) * (ladoB))));
-         System.out.println(df.format(respuestaGamma));
+        System.out.println(df.format(respuestaGamma));
+        
+        this.reporte1 = this.reporte1+"----------------Respuesta--------------"+"\n"; 
+                this.reporte1 = this.reporte1+" Este es el angulo Gamma" +"\n";
+
+        this.reporte1 = this.reporte1+respuestaGamma+"\n";     
+
 
         return respuestaBeta;
     }
@@ -128,8 +209,26 @@ public class Calculadora {
         double respuestaAlfa = (double) 0.0;
         double respuestaGamma = (double) 0.0;
         System.out.println("Esta es la respuesta de la opcion 2");
+                this.reporte1 = this.reporte1+" -------------Operacion opcion 2------------------" +"\n";
+
+                this.reporte1 = this.reporte1+"Operaciones para encontrar lado A" +"\n";
 
 //                 Operaciones para lado A
+
+
+                this.reporte1 = this.reporte1+"Este es el ladoB"+"\n";
+                this.reporte1 = this.reporte1+ladoB+"\n";
+                
+
+                this.reporte1 = this.reporte1+"Este es el ladoC"+"\n";
+                this.reporte1 = this.reporte1+ladoC+"\n";
+               
+            
+                this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+
+        this.reporte1 = this.reporte1+"Lado A = Math.sqrt(ladoA * ladoA + ladoC * ladoC - 2 * ladoC * ladoA * Math.cos(radian))"+"\n";
+        this.reporte1 = this.reporte1+"Este es el resultado"+"\n";
+        
 
         System.out.println("Esta es el lado A");
         DecimalFormat df= new DecimalFormat ("#.000");
@@ -137,17 +236,70 @@ public class Calculadora {
         double radian = Math.toRadians(angulo);
         respuestaLadoA = Math.sqrt(ladoB * ladoB + ladoC * ladoC - 2 * ladoC * ladoB * Math.cos(radian));
         System.out.println(df.format(respuestaLadoA));
+    this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+                    this.reporte1 = this.reporte1+" Este es el lado A" +"\n";
 
+
+        this.reporte1 = this.reporte1+respuestaLadoA+"\n";  
+
+        
+        
+        
+        
+        
 //                 Operaciones para Alfa
         System.out.println("Este es el angulo Alfa");
+                        this.reporte1 = this.reporte1+"Operaciones para encontrar angulo Alfa" +"\n";
+
+                this.reporte1 = this.reporte1+"Este es el ladoB"+"\n";
+                this.reporte1 = this.reporte1+ladoB+"\n";
+                
+
+                this.reporte1 = this.reporte1+"Este es el ladoA"+"\n";
+                this.reporte1 = this.reporte1+ladoA+"\n";
+               
+                this.reporte1 = this.reporte1+"Este es el ladoC"+"\n";
+                this.reporte1 = this.reporte1+ladoC+"\n";
+               
+                this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+
+        this.reporte1 = this.reporte1+"Math.toDegrees(Math.acos((-ladoA * ladoA - ladoC * ladoC + ladoB * ladoB) / (-2 * (ladoA) * (ladoB))));"+"\n";
+        this.reporte1 = this.reporte1+"--------------Respuesta-------------------"+"\n"; 
+        this.reporte1 = this.reporte1+" Este es el angulo Alfa" +"\n";
+        
 
         respuestaAlfa = Math.toDegrees(Math.acos((-ladoA * ladoA - ladoC * ladoC + ladoB * ladoB) / (-2 * (ladoC) * (ladoA))));
         System.out.println(df.format(respuestaAlfa));
-        
+                this.reporte1 = this.reporte1+respuestaAlfa+"\n";  
+
 //                 Operaciones para Gamma
         System.out.println("Este es el aunglo Gamma");
+       this.reporte1 = this.reporte1+"Operaciones para encontrar angulo Gamma" +"\n";
+
+        
+        
+                this.reporte1 = this.reporte1+"Este es el ladoB"+"\n";
+                this.reporte1 = this.reporte1+ladoB+"\n";
+                
+
+                this.reporte1 = this.reporte1+"Este es el ladoA"+"\n";
+                this.reporte1 = this.reporte1+ladoA+"\n";
+               
+                this.reporte1 = this.reporte1+"Este es el ladoC"+"\n";
+                this.reporte1 = this.reporte1+ladoC+"\n";
+               
+                this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+
+        this.reporte1 = this.reporte1+"Math.toDegrees(Math.acos((-ladoA * ladoA + ladoC * ladoC - ladoB * ladoB) / (-2 * (ladoA) * (ladoB))));"+"\n";
+                this.reporte1 = this.reporte1+" -------------Respuesta------------------" +"\n";
+       
+        this.reporte1 = this.reporte1+"Este es la respuesta del angulo Gamma"+"\n";  
+
+        
         respuestaGamma = Math.toDegrees(Math.acos((-ladoA * ladoA + ladoC * ladoC - ladoB * ladoB) / (-2 * (ladoA) * (ladoB))));
         System.out.println(df.format(respuestaGamma));
+                this.reporte1 = this.reporte1+respuestaGamma+"\n";  
+
         return respuestaGamma;
     }
 
@@ -158,30 +310,99 @@ public class Calculadora {
         double ladoC = 13.02;
         double respuestaLadoC = (double) 0.0;
         double angulo = 30;
+        
 
         double respuestaAlfa = (double) 0.0;
         double respuestaBeta = (double) 0.0;
         System.out.println("Esta es la respuesta de la opcion 3");
+                this.reporte1 = this.reporte1+" -------------Operacion opcion 3------------------" +"\n";
+       this.reporte1 = this.reporte1+"Operaciones para encontrar el lado C" +"\n";
 
 //                 Operaciones para lado C
+
+                this.reporte1 = this.reporte1+"Este es el ladoB"+"\n";
+                this.reporte1 = this.reporte1+ladoB+"\n";
+                
+
+                this.reporte1 = this.reporte1+"Este es el ladoA"+"\n";
+                this.reporte1 = this.reporte1+ladoA+"\n";
+               
+            
+                this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+
+        this.reporte1 = this.reporte1+"Lado C = Math.sqrt(ladoA * ladoA + ladoC * ladoC - 2 * ladoC * ladoA * Math.cos(radian))"+"\n";
+          this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+
+        this.reporte1 = this.reporte1+"Este es el resultado lado C"+"\n";
+         
+
       DecimalFormat df= new DecimalFormat ("#.000");
      System.out.println("Este es el lado C");
         double radian = Math.toRadians(angulo);
         respuestaLadoC = Math.sqrt(ladoB * ladoB + ladoA * ladoA - 2 * ladoA * ladoB * Math.cos(radian));
          System.out.println(df.format(respuestaLadoC));
+         this.reporte1 = this.reporte1+respuestaLadoC+"\n"; 
 //                 Operaciones para Alfa
-System.out.println("Este es en angulo Alfa");
+
+
+       this.reporte1 = this.reporte1+"Operaciones para encontrar el angulo Alfa" +"\n";
+
+                this.reporte1 = this.reporte1+"Este es el ladoB"+"\n";
+                this.reporte1 = this.reporte1+ladoB+"\n";
+                
+
+                this.reporte1 = this.reporte1+"Este es el ladoA"+"\n";
+                this.reporte1 = this.reporte1+ladoA+"\n";
+               
+                this.reporte1 = this.reporte1+"Este es el ladoC"+"\n";
+                this.reporte1 = this.reporte1+ladoC+"\n";
+               
+                this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+
+        this.reporte1 = this.reporte1+"Math.toDegrees(Math.acos((-ladoA * ladoA - ladoC * ladoC + ladoB * ladoB) / (-2 * (ladoA) * (ladoB))));"+"\n";
+        
+                this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+        
+        this.reporte1 = this.reporte1+"Este es la respuesta del angulo Alfa"+"\n";  
+        
+        
+         
+  
+
+        System.out.println("Este es en angulo Alfa");
         respuestaAlfa = Math.toDegrees(Math.acos((-ladoA * ladoA - ladoC * ladoC + ladoB * ladoB) / (-2 * (ladoC) * (ladoA))));
          System.out.println(df.format(respuestaAlfa));
+          this.reporte1 = this.reporte1+respuestaAlfa+"\n";
 //                 Operaciones para Beta
-System.out.println("Este es en angulo Beta");
 
+       this.reporte1 = this.reporte1+"Operaciones para encontrar el angulo Beta" +"\n";
+
+                this.reporte1 = this.reporte1+"Este es el ladoB"+"\n";
+                this.reporte1 = this.reporte1+ladoB+"\n";
+                
+
+                this.reporte1 = this.reporte1+"Este es el ladoA"+"\n";
+                this.reporte1 = this.reporte1+ladoA+"\n";
+               
+                this.reporte1 = this.reporte1+"Este es el ladoC"+"\n";
+                this.reporte1 = this.reporte1+ladoC+"\n";
+               
+                this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+
+        this.reporte1 = this.reporte1+"Math.toDegrees(Math.acos((-ladoA * ladoA + ladoC * ladoC - ladoB * ladoB) / (-2 * (ladoA) * (ladoB))));"+"\n";
+        
+                        this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+
+        this.reporte1 = this.reporte1+"Este es la respuesta del angulo Beta"+"\n";  
+         
+  
         respuestaBeta = Math.toDegrees(Math.acos((-ladoA * ladoA + ladoC * ladoC - ladoB * ladoB) / (-2 * (ladoA) * (ladoB))));
          System.out.println(df.format(respuestaBeta));
+         this.reporte1 = this.reporte1+respuestaBeta+"\n"; 
         return respuestaBeta;
     }
+   public int[][] sumaDeMatrices(int[][] matrizA, int[][] matrizB) {
 
-    public int[][] sumaDeMatrices(int[][] matrizA, int[][] matrizB) {
 
         int[][] matriz1 = matrizA;
         int[][] matriz2 = matrizB;
@@ -282,12 +503,37 @@ System.out.println("Este es en angulo Beta");
 
         int[][] resultadoSuma = this.sumaDeMatrices(matriz1, matriz2);
         int[][] resultadoresta = this.RestaDeMatrices(matriz1, matriz2);
+       this.reporte1 = this.reporte1+"Suma y resta de matrices opcion 1" +"\n";
+
+        this.reporte1 = this.reporte1+"Esta es la matriz A" +"\n";
+        this.impresionMatrices(matriz1);
+        
         System.out.println("Esta es la matriz A");
         this.impresion(matriz1);
+        
+        this.reporte1 = this.reporte1+"Esta es la matriz B" +"\n";
+        this.impresionMatrices(matriz2);
         System.out.println("Esta es la matriz B");
-        this.impresion(matriz2);
+        
+       this.impresion(matriz2);
+         this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+         this.reporte1 = this.reporte1+" resultado[i][j] = matrizA[i][j] + matrizB[i][j];" +"\n";
+                        
+        this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+
+       this.reporte1 = this.reporte1+"Esta es la suma de A y B" +"\n";
+        this.impresionMatrices(resultadoSuma);
+
+        
         System.out.println("Esta es la suma de A y B");
         this.impresion(resultadoSuma);
+        
+        this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+        this.reporte1 = this.reporte1+" resultado[i][j] = matrizA[i][j] - matrizB[i][j];" +"\n";
+              
+        this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+        this.reporte1 = this.reporte1+"Esta es la resta de B y A" +"\n";
+        this.impresionMatrices(resultadoresta);
         System.out.println("Esta es la resta de A y B");
         this.impresion(resultadoresta);
 
@@ -362,21 +608,38 @@ System.out.println("Este es en angulo Beta");
 
         int[][] resultadoSuma = this.sumaDeMatrices(matriz1, matriz2);
         int[][] resultadoresta = this.RestaDeMatrices(matriz1, matriz2);
-        System.out.println(" ");
+       this.reporte1 = this.reporte1+"Suma y resta de matrices opcion 2" +"\n";
+
+        this.reporte1 = this.reporte1+"Esta es la matriz A" +"\n";
+        this.impresionMatrices(matriz1);
+        
         System.out.println("Esta es la matriz A");
-        System.out.println(" ");
         this.impresion(matriz1);
-        System.out.println(" ");
+        
+        this.reporte1 = this.reporte1+"Esta es la matriz B" +"\n";
+        this.impresionMatrices(matriz2);
         System.out.println("Esta es la matriz B");
-        System.out.println(" ");
-        this.impresion(matriz2);
-        System.out.println(" ");
+        
+       this.impresion(matriz2);
+         this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+         this.reporte1 = this.reporte1+" resultado[i][j] = matrizA[i][j] + matrizB[i][j];" +"\n";
+                        
+        this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+
+       this.reporte1 = this.reporte1+"Esta es la suma de A y B" +"\n";
+        this.impresionMatrices(resultadoSuma);
+
+        
         System.out.println("Esta es la suma de A y B");
-        System.out.println(" ");
         this.impresion(resultadoSuma);
-        System.out.println(" ");
+        
+        this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+        this.reporte1 = this.reporte1+" resultado[i][j] = matrizA[i][j] - matrizB[i][j];" +"\n";
+              
+        this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+        this.reporte1 = this.reporte1+"Esta es la resta de B y A" +"\n";
+        this.impresionMatrices(resultadoresta);
         System.out.println("Esta es la resta de A y B");
-        System.out.println(" ");
         this.impresion(resultadoresta);
 
     }
@@ -450,21 +713,38 @@ System.out.println("Este es en angulo Beta");
 
         int[][] resultadoSuma = this.sumaDeMatrices(matriz1, matriz2);
         int[][] resultadoresta = this.RestaDeMatrices(matriz1, matriz2);
-        System.out.println(" ");
+       this.reporte1 = this.reporte1+"Suma y resta de matrices opcion 3" +"\n";
+
+        this.reporte1 = this.reporte1+"Esta es la matriz A" +"\n";
+        this.impresionMatrices(matriz1);
+        
         System.out.println("Esta es la matriz A");
-        System.out.println(" ");
         this.impresion(matriz1);
-        System.out.println(" ");
+        
+        this.reporte1 = this.reporte1+"Esta es la matriz B" +"\n";
+        this.impresionMatrices(matriz2);
         System.out.println("Esta es la matriz B");
-        System.out.println(" ");
-        this.impresion(matriz2);
-        System.out.println(" ");
+        
+       this.impresion(matriz2);
+         this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+         this.reporte1 = this.reporte1+" resultado[i][j] = matrizA[i][j] + matrizB[i][j];" +"\n";
+                        
+        this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+
+       this.reporte1 = this.reporte1+"Esta es la suma de A y B" +"\n";
+        this.impresionMatrices(resultadoSuma);
+
+        
         System.out.println("Esta es la suma de A y B");
-        System.out.println(" ");
         this.impresion(resultadoSuma);
-        System.out.println(" ");
+        
+        this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+        this.reporte1 = this.reporte1+" resultado[i][j] = matrizA[i][j] - matrizB[i][j];" +"\n";
+              
+        this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+        this.reporte1 = this.reporte1+"Esta es la resta de B y A" +"\n";
+        this.impresionMatrices(resultadoresta);
         System.out.println("Esta es la resta de A y B");
-        System.out.println(" ");
         this.impresion(resultadoresta);
 
     }
@@ -515,14 +795,38 @@ System.out.println("Este es en angulo Beta");
         matriz2[3][1] = 6;
         matriz2[3][2] = 7;
         matriz2[3][3] = 4;
+        
+        
+        
+                this.reporte1 = this.reporte1+" -------------Division Opcion 1------------------" +"\n";
         System.out.println("Esta es la divicion 1");
+        
         float[][] respuesta = this.divisionMatrices(matriz1, matriz2);
+        
+
+        this.reporte1 = this.reporte1+" Esta es la matriz A" +"\n";
+
         System.out.println("Esta es la amtriz A");
-        System.out.println(matriz1);
+        this.impresion(matriz1);
+        this.impresionMatrices(matriz1);
+
+        
+        this.reporte1 = this.reporte1+" Esta es la matriz B" +"\n";
+
          System.out.println("Esta es la amtriz B");
-        System.out.println(matriz2);
+        this.impresion(matriz2);
+        this.impresionMatrices(matriz2);
+                   this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+                   this.reporte1 = this.reporte1+" A/B^-1 " +"\n";
+
+        
+        
+         this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+         this.reporte1 = this.reporte1+" Respuesta A/B" +"\n";
+       
         System.out.println("Respuesta matriz A/B");
         this.impresion(respuesta);
+        this.impresionMatrices(respuesta);
 
     }
 
@@ -573,14 +877,34 @@ System.out.println("Este es en angulo Beta");
         matriz2[3][2] = 14;
         matriz2[3][3] = 6;
 
-        System.out.println("Esta es la divicion 2");
+                this.reporte1 = this.reporte1+" -------------Division Opcion 2------------------" +"\n";
+        System.out.println("Esta es la divicion 1");
+        
         float[][] respuesta = this.divisionMatrices(matriz1, matriz2);
+        
+
+        this.reporte1 = this.reporte1+" Esta es la matriz A" +"\n";
+
         System.out.println("Esta es la amtriz A");
-        System.out.println(matriz1);
+        this.impresion(matriz1);
+        this.impresionMatrices(matriz1);
+
+        
+        this.reporte1 = this.reporte1+" Esta es la matriz B" +"\n";
+
          System.out.println("Esta es la amtriz B");
-        System.out.println(matriz2);
+        this.impresion(matriz2);
+        this.impresionMatrices(matriz2);
+                  this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+                   this.reporte1 = this.reporte1+" A/B^-1 " +"\n";
+
+          this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+       
+         this.reporte1 = this.reporte1+" Respuesta A/B" +"\n";
+       
         System.out.println("Respuesta matriz A/B");
         this.impresion(respuesta);
+        this.impresionMatrices(respuesta);
 
     }
 
@@ -631,14 +955,35 @@ System.out.println("Este es en angulo Beta");
         matriz2[3][2] = 4;
         matriz2[3][3] = 3;
 
-        System.out.println("Esta es la divicion 3");
+                this.reporte1 = this.reporte1+" -------------Division Opcion 3------------------" +"\n";
+        System.out.println("Esta es la divicion 1");
+        
         float[][] respuesta = this.divisionMatrices(matriz1, matriz2);
+        
+
+        this.reporte1 = this.reporte1+" Esta es la matriz A" +"\n";
+
         System.out.println("Esta es la amtriz A");
-        System.out.println(matriz1);
+        this.impresion(matriz1);
+        this.impresionMatrices(matriz1);
+
+        
+        this.reporte1 = this.reporte1+" Esta es la matriz B" +"\n";
+
          System.out.println("Esta es la amtriz B");
-        System.out.println(matriz2);
+        this.impresion(matriz2);
+        this.impresionMatrices(matriz2);
+        
+             this.reporte1 = this.reporte1+" -------------Ecuacion------------------" +"\n";
+             this.reporte1 = this.reporte1+" A/B^-1 " +"\n";
+
+           this.reporte1 = this.reporte1+" -------------Resultado------------------" +"\n";
+     
+         this.reporte1 = this.reporte1+" Respuesta A/B" +"\n";
+       
         System.out.println("Respuesta matriz A/B");
         this.impresion(respuesta);
+        this.impresionMatrices(respuesta);
 
     }
 
@@ -871,4 +1216,52 @@ System.out.println("Este es en angulo Beta");
         }
 
     }
+    
+     public void impresionMatrices(float[][] matrizA) {
+        float[][] sumaDeMatrices = matrizA;
+        int largo = sumaDeMatrices.length;
+        DecimalFormat df= new DecimalFormat ("#.000");
+ 
+        String mat = "<table style=\"width:100%\">";
+
+        for (int i = 0; i < largo; i++) {
+             mat = mat +"<tr>";
+            for (int j = 0; j < largo; j++) {
+                 mat = mat +"<td>";
+                 mat = mat +df.format(sumaDeMatrices[i][j]);
+                 mat = mat +"</td>";
+            }
+            mat = mat +"</tr>";
+        }
+        
+        mat = mat +"</table>\n";
+        
+        this.reporte1 = this.reporte1 + mat;
+
+    }
+     
+      public void impresionMatrices(int[][] matrizA) {
+        int[][] sumaDeMatrices = matrizA;
+        int largo = sumaDeMatrices.length;
+ 
+        String mat = "<table style=\"width:100%\">";
+
+        for (int i = 0; i < largo; i++) {
+             mat = mat +"<tr>";
+            for (int j = 0; j < largo; j++) {
+                 mat = mat +"<td>";
+                 mat = mat +(sumaDeMatrices[i][j]);
+                 mat = mat +"</td>";
+            }
+            mat = mat +"</tr>";
+        }
+        
+        mat = mat +"</table>\n";
+        
+        this.reporte1 = this.reporte1 + mat;
+
+    }
+    
+    
+
 }

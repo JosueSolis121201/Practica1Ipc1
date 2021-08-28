@@ -384,6 +384,29 @@ public class Tablero {
           }
     }
     
+    public void generarReporte1(){
+        String bitacora = this.reporte1 + this.calcu.reporte1;
+        this.escribirCss();
+        String html = "<html><head> <link rel=\"stylesheet\" href=\"estilo.css\"><title></title></head><body><table class=\"styled-table\"><thead><tr><th> Numero</th><th> Contenido </th> </tr></thead>";
+        String[] saltitos = bitacora.split("\n");
+        for(int i=0;i<saltitos.length;i++){
+             html = html + "<tr><td>"+(i+1)+"</td>"+"<td>"+saltitos[i]+"</td></tr>";
+        }
+       
+        html = html + "</body></html>";
+        
+          try {
+            FileWriter myWriter = new FileWriter("reporte1.html");
+            myWriter.write(html);
+            myWriter.close();
+          } catch (IOException e) {
+            System.out.println("Error 1"
+                    + "al abrir");
+            e.printStackTrace();
+          }
+    }
+   
+    
     public void operacionesFacil() {
         int generador = (int) (Math.random() * 2 + 2);
 
