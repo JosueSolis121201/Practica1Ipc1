@@ -10,8 +10,10 @@ public class Tablero {
     char [] jugador  ;    
     char [] penalizacion  ;
     int pocicion;
+    Calculadora calcu;
+
     public Tablero(){
-        
+         this.calcu = new Calculadora();
          this.jugador   = new char[64];
          this.penalizacion   = new char [64];
          this.jugadorYPenalizaciones();
@@ -321,8 +323,38 @@ public class Tablero {
         Scanner sn = new Scanner(System.in);
         while(true){
               this.dibujadoTablero();
+              if(this.penalizacion[pocicion]=='#'){
+                  System.out.println("");
+                  System.out.println("“¡Has caído en una penalización!”");
+                  if(pocicion<16){
+                      
+                      
+                  this.calcu.leyDeCosenos();
+                          
+                  
+                  
+                  }else if(pocicion<40){
+                      
+                      
+                  this.calcu.SumaDeMatrices();
+                          
+                  
+                  
+                  }else{
+                      
+                      
+                  this.calcu.divisionElegir();
+                          
+                  
+                  
+                 
+                  }
+                  
+              }
               this.jugador[pocicion]=' '; 
               this.pocicion = this.dado()+pocicion ;
+              
+              
               if (pocicion>=63){
                      pocicion=63;
                      this.jugador[pocicion]='@';
@@ -331,8 +363,13 @@ public class Tablero {
                      this.dibujadoTablero();
                      break;
         }
+              
+              
               this.jugador[pocicion]='@';
-              sn.nextLine();
+              String lectura = sn.nextLine();
+              if(lectura.equals("p")){
+                  break;
+              }
         }
         
         
