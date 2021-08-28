@@ -9,12 +9,13 @@ public class Practica_1 {
         
         
         
-        Tablero juego = new Tablero();
-        juego.juego();
+        Menu juego = new Menu();
+        juego.estructuradoMenu();
         
+     
         
-        
-        
+                 
+       
     //    Calculadora nuevaCalcu =new Calculadora();
        //  nuevaCalcu.divisionDeMatricesOpcion3();
  

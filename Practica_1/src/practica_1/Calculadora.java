@@ -2,25 +2,32 @@ package practica_1;
 
 import java.text.DecimalFormat;
 public class Calculadora {
+    String reporte1;
+    String reporte2;
 
+    public Calculadora(){
+        this.reporte1="";
+        this.reporte2="";
+
+    }
     public double leyDeCosenos() {
         int numero = (int) (Math.random() * 2 + 1);
         double respuesta = 0;
         switch (numero) {
             case 1:
-
+                this.reporte2 = this.reporte2+" Entrando opcion 1 operacion facil" +"\n";
                 respuesta = this.LeyDeCosenosopcion1();
                    
                 break;
 
             case 2:
-
+                this.reporte2 = this.reporte2+" Entrando opcion 2 operacion facil" +"\n";
                 respuesta = this.LeyDeCosenosopcion2();
 
                 break;
 
             case 3:
-
+                this.reporte2 = this.reporte2+" Entrando opcion 3 operacion facil" +"\n";
                 respuesta = this.LeyDeCosenosopcion3();
 
                 break;
@@ -34,19 +41,19 @@ public class Calculadora {
         double respuesta = 0;
         switch (numero) {
             case 1:
-
+                this.reporte2 = this.reporte2+" Entrando opcion 1 operacion media" +"\n";
                 this.sumaYRestaDeMatricesOpcion1();
 
                 break;
 
             case 2:
-
+                this.reporte2 = this.reporte2+" Entrando opcion 2 operacion media" +"\n";
                 this.sumaYRestaDeMatricesOpcion2();
 
                 break;
 
             case 3:
-
+                this.reporte2 = this.reporte2+" Entrando opcion 3 operacion media" +"\n";
                 this.sumaYRestaDeMatricesOpcion3();
 
                 break;
@@ -60,19 +67,19 @@ public class Calculadora {
         double respuesta = 0;
         switch (numero) {
             case 1:
-
+                this.reporte2 = this.reporte2+" Entrando opcion 1 operacion dificl" +"\n";
                 this.divisionDeMatricesOpcion1();
 
                 break;
 
             case 2:
-
+                this.reporte2 = this.reporte2+" Entrando opcion 2 operacion dificl" +"\n";
                 this.divisionDeMatricesOpcion2();
 
                 break;
 
             case 3:
-
+                this.reporte2 = this.reporte2+" Entrando opcion 3 operacion dificl" +"\n";
                 this.divisionDeMatricesOpcion3();
 
                 break;
@@ -93,7 +100,7 @@ public class Calculadora {
 //                 Operaciones para lado B
         double radian = Math.toRadians(angulo);
         System.out.println("Esta es lado B");
-        DecimalFormat df= new DecimalFormat ("#.00");
+        DecimalFormat df= new DecimalFormat ("#.000");
         respuestaLadoB = Math.sqrt(ladoA * ladoA + ladoC * ladoC - 2 * ladoC * ladoA * Math.cos(radian));
         
        
@@ -125,7 +132,7 @@ public class Calculadora {
 //                 Operaciones para lado A
 
         System.out.println("Esta es el lado A");
-        DecimalFormat df= new DecimalFormat ("#.00");
+        DecimalFormat df= new DecimalFormat ("#.000");
         
         double radian = Math.toRadians(angulo);
         respuestaLadoA = Math.sqrt(ladoB * ladoB + ladoC * ladoC - 2 * ladoC * ladoB * Math.cos(radian));
@@ -157,7 +164,7 @@ public class Calculadora {
         System.out.println("Esta es la respuesta de la opcion 3");
 
 //                 Operaciones para lado C
-      DecimalFormat df= new DecimalFormat ("#.00");
+      DecimalFormat df= new DecimalFormat ("#.000");
      System.out.println("Este es el lado C");
         double radian = Math.toRadians(angulo);
         respuestaLadoC = Math.sqrt(ladoB * ladoB + ladoA * ladoA - 2 * ladoA * ladoB * Math.cos(radian));
@@ -848,7 +855,7 @@ System.out.println("Este es en angulo Beta");
 
     public void impresion(float[][] matrizA) {
         float[][] sumaDeMatrices = matrizA;
-        DecimalFormat df= new DecimalFormat ("#.00");
+        DecimalFormat df= new DecimalFormat ("#.000");
         int largo = sumaDeMatrices.length;
 
 
