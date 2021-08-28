@@ -1,17 +1,27 @@
 
 package practica_1;
 
+import java.util.Scanner;
+
+
 
 public class Tablero {
     int [][] enumerado ;
-    int [][] jugador  ;    
-    int [][] penalizacion  ;
-
+    char [] jugador  ;    
+    char [] penalizacion  ;
+    int pocicion;
     public Tablero(){
         
-        
-         enumerado   = new int [8][8];
-         enumerado   = new int [8][8];
+         this.jugador   = new char[64];
+         this.penalizacion   = new char [64];
+         this.jugadorYPenalizaciones();
+         this.operacionesFacil();
+         this.operacionesFaci2();
+         this.operacionesFaci3();
+       
+       
+     
+         
          enumerado   = new int [8][8];
          enumerado[0][0]=57;
          enumerado[0][1]=58;
@@ -85,7 +95,6 @@ public class Tablero {
          enumerado[7][6]=2;
          enumerado[7][7]=1;   
     }
-    
     public void dibujadoTablero (){
     
         
@@ -105,7 +114,8 @@ public class Tablero {
            }
             System.out.println("");
            for(int j=0;j<8;j++){
-               System.out.print("│  │");
+               System.out.print("│"+jugador[this.convertirPosicion(i, j)]+this.penalizacion[this.convertirPosicion(i, j)] +"│");
+            
                
          }
     }
@@ -113,29 +123,289 @@ public class Tablero {
                    System.out.print("-------------------------------------------");
 
     }
+    public int convertirPosicion(int x, int y){
+        switch(x){
+             case 0:
+                switch(y){
+                    case 0:
+                         return 56;
+                    case 1:
+                         return 57;          
+                    case 2:
+                         return 58;  
+                    case 3:
+                         return 59;     
+                    case 4:
+                         return 60;     
+                    case 5:
+                         return 61;     
+                    case 6:
+                         return 62;     
+                    case 7:
+                         return 63;     
+              }
+                
+                case 1:
+                switch(y){
+                    case 0:
+                         return 55;
+                    case 1:
+                         return 54;          
+                    case 2:
+                         return 53;  
+                    case 3:
+                         return 52;     
+                    case 4:
+                         return 51;     
+                    case 5:
+                         return 50;     
+                    case 6:
+                         return 49;     
+                    case 7:
+                         return 48;     
+              }
+                case 2:
+                switch(y){
+                    case 0:
+                         return 40;
+                    case 1:
+                         return 41;          
+                    case 2:
+                         return 42;  
+                    case 3:
+                         return 43;     
+                    case 4:
+                         return 44;     
+                    case 5:
+                         return 45;     
+                    case 6:
+                         return 46;     
+                    case 7:
+                         return 47;
+                }    
+                case 3:
+                switch(y){
+                    case 0:
+                         return 39;
+                    case 1:
+                         return 38;          
+                    case 2:
+                         return 37;  
+                    case 3:
+                         return 36;     
+                    case 4:
+                         return 35;     
+                    case 5:
+                         return 34;     
+                    case 6:
+                         return 33;     
+                    case 7:
+                         return 32;              
+              }
+               
+                 case 4:
+                switch(y){
+                    case 0:
+                         return 24;
+                    case 1:
+                         return 25;          
+                    case 2:
+                         return 26;  
+                    case 3:
+                         return 27;     
+                    case 4:
+                         return 28;     
+                    case 5:
+                         return 29;     
+                    case 6:
+                         return 30;     
+                    case 7:
+                         return 31;              
+              }
+                  case 5:
+                switch(y){
+                    case 0:
+                         return 23;
+                    case 1:
+                         return 22;          
+                    case 2:
+                         return 21;  
+                    case 3:
+                         return 20;     
+                    case 4:
+                         return 19;     
+                    case 5:
+                         return 18;     
+                    case 6:
+                         return 17;     
+                    case 7:
+                         return 16;              
+              }
+                             
+                   case 6:
+                switch(y){
+                    case 0:
+                         return 8;
+                    case 1:
+                         return 9;          
+                    case 2:
+                         return 10;  
+                    case 3:
+                         return 11;     
+                    case 4:
+                         return 12;     
+                    case 5:
+                         return 13;     
+                    case 6:
+                         return 14;     
+                    case 7:
+                         return 15;              
+              }
+                             
+                    case 7:
+                switch(y){
+                    case 0:
+                         return 7;
+                    case 1:
+                         return 6;          
+                    case 2:
+                         return 5;  
+                    case 3:
+                         return 4;     
+                    case 4:
+                         return 3;     
+                    case 5:
+                         return 2;     
+                    case 6:
+                         return 1;     
+                    case 7:
+                         return 0;              
+              }
+                             
+                                                                               
+                
+              break;
+      }
+      
+      return 0;
     
-
-    
-    
+    }
     public void jugadorYPenalizaciones (){
         
-        for(int i=0;i<8;i++){
-            
-             for(int j=0;j<8;j++){
-                 
+    
+       for(int i=0;i<64;i++){
+       this.penalizacion[i]=' ';
+       this.jugador[i]= ' ';
+       }
+       
+       this.jugador[this.pocicion]='@';
+       for( int i=0;i<64;i++){
+       
+           this.penalizacion[i]= ' ';
+       }
+         
+          
+       
+       
+       
+    
+    }
+    public int dado(){
         
-             }
+        int numero = (int)(Math. random()*6+2);
         
         
+        return numero;
+    }
+    public void juego (){
+        Scanner sn = new Scanner(System.in);
+        while(true){
+              this.dibujadoTablero();
+              this.jugador[pocicion]=' '; 
+              this.pocicion = this.dado()+pocicion ;
+              if (pocicion>=63){
+                     pocicion=63;
+                     this.jugador[pocicion]='@';
+                     System.out.println("  ");
+                     System.out.println("Felicidades Ganaste");
+                     this.dibujadoTablero();
+                     break;
         }
+              this.jugador[pocicion]='@';
+              sn.nextLine();
+        }
+        
+        
+        
         
         
     
     
     }
+    public void operacionesFacil(){
+        int generador = (int)(Math. random()*2+2); 
+
+          while(true){
+              int contador =0;
+
+              int pocicion = (int)(Math. random()*13+2);
+              this.penalizacion[pocicion]='#';
+             for(int i=0;i<16;i++){
+
+                 if(this.penalizacion[i]=='#'){
+
+                     contador++;
+                 }
+             }
+             if(contador>=generador){
+
+             break;
+             }
+          }
+          }
     
+     public void operacionesFaci2(){
+        int generador = (int)(Math. random()*2+2); 
+
+          while(true){
+              int contador =0;
+
+              int pocicion = (int)(Math. random()*23+16);
+              this.penalizacion[pocicion]='#';
+             for(int i=16;i<40;i++){
+
+                 if(this.penalizacion[i]=='#'){
+
+                     contador++;
+                 }
+             }
+             if(contador>=generador){
+
+             break;
+             }
+          }
+          }
     
-    
-    
+    public void operacionesFaci3(){
+        int generador = (int)(Math. random()*2+2); 
+
+          while(true){
+              int contador =0;
+
+              int pocicion = (int)(Math. random()*23+40);
+              this.penalizacion[pocicion]='#';
+             for(int i=40;i<64;i++){
+
+                 if(this.penalizacion[i]=='#'){
+
+                     contador++;
+                 }
+             }
+             if(contador>=generador){
+
+             break;
+             }
+          }
+          }
     
 }
