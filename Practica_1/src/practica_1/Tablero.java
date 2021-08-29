@@ -473,7 +473,7 @@ public class Tablero {
         }
     }
 
-    public void escribirCss(){
+        public void escribirCss(){
         String css = "body{\n" +
 "    text-align: center;\n" +
 "    align-items: center;\n" +
